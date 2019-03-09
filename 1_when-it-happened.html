@@ -1,21 +1,41 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <meta name="author" content="Script Tutorials" />
+    <title>Datepicker jQuery UI - Demo 1 | Script Tutorials</title>
+
+    <!-- add styles -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/ui-lightness/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- add scripts -->
+    <script src="js/jquery-1.8.3.js"></script>
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+
+    <script>
+    $(function(){
+      $.datepicker.setDefaults(
+        $.extend($.datepicker.regional[''])
+      );
+      $('#datepicker').datepicker();
+      $('#datepicker2').datepicker();
+    });
+    </script>
+</head>
+<body>
+
     <form>
-      <label
-        >When did the incident happen? <br />
-        <input name="resp1" type="text" />
-      </label>
+        <label>When did the incident happen?<br />
+          <div id="datepicker2"></div>
+        </label>
+
+        <br />
+      </form>
       <br />
-    </form>
-    <br />
-    <a href="index.html"><button>Previous</button></a>
-    <a href="2_where-it-happened.html"><button>Previous</button></a>
-  </body>
-</html>
+      <a href="index.html"><button>Previous</button></a>
+      <a href="2_where-it-happened.html"><button>Next</button></a>
+</body>
