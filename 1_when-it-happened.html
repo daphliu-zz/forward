@@ -11,6 +11,7 @@
     <!-- add styles -->
     <link href="css/main.css" rel="stylesheet" type="text/css" />
     <link href="css/ui-lightness/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/am-pm.css" rel="stylesheet" type="text/css" />
 
     <!-- add scripts -->
     <script src="js/jquery-1.8.3.js"></script>
@@ -18,18 +19,46 @@
 
     <script>
     $(function(){
-      $.datepicker.setDefaults(
-        $.extend($.datepicker.regional[''])
-      );
-      $('#datepicker').datepicker();
-      $('#datepicker2').datepicker();
+        $.datepicker.setDefaults(
+          $.extend($.datepicker.regional[''])
+        );
+        $('#datepicker').datepicker({
+          beforeShow: function(input) {
+            $(input).css('background-color','#ff0');
+          },
+          onSelect: function(dateText, obj) {
+            $(this).css('background-color','');
+            alert('Selected: ' + dateText +
+              "\n\nid: " + obj.id +
+              "\nselectedDay: " + obj.selectedDay +
+              "\nselectedMonth: " + obj.selectedMonth +
+              "\nselectedYear: " + obj.selectedYear);
+          },
+          onClose: function(dateText, obj) {
+            $(this).css('background-color','');
+          }
+        });
     });
     </script>
 </head>
 <body>
     <form>
         <label>When did the incident happen?<br />
-          <div id="datepicker2"></div>
+          <div id="datepicker"></div><br />
+          <label>What time did it happen?<br />
+            <input name="resp1" type="text"/>
+            <p style="display: inline;">:</p>
+            <input name="resp1" type="text"/>
+          </label>
+          <label class="ampm-switch">
+				    <input type="checkbox" id="" name="" value="" checked=""> 
+				    <div class="toggle-button"></div>
+			    </label>
+          <br />
+          <label>Would you like to elaborate about anything relating to when the incident happened?<br />
+            <input name="resp1" type="text" />
+          </label>
+          <br />
         </label>
 
         <br />
