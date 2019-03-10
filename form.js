@@ -31,7 +31,7 @@ if (email != null) {
       get("resp1_1"),
       get("resp1_2"),
       get("res3"),
-      get("res2"),
+      get("resp_4"),
       get("res2"),
       get("res2"),
       get("res2"),
@@ -41,18 +41,21 @@ if (email != null) {
 
     const subject = "Forward";
     const body = `
-    When did the incident happen? ? ${arr[0] +
-      ":" +
-      arr[1] +
-      arr[3] +
-      resp1_4}\n
-    Where did the incident happen? ${q2}\n
-    What happened? ${q3} \n
-    Do you know the person who assaulted you? ${q3} \n
-    Was the assault with a weapon? ${q3} \n
-    Were there any witnesses? ${q3} \n
-    Are there any image evidences you would like to share? ${q3} \n
-    If you choose to submit the form to the police, fill out your personal data. ${q3} \n`;
+    When did the incident happen? ? ${arr[0] + ":" + arr[1]}\n
+    Where did the incident happen? \n
+    What happened? ${arr[2]} \n
+    Do you know the person who assaulted you? ${arr[3]} \n
+    Was the assault with a weapon?  \n
+    Were there any witnesses?  \n
+    Are there any image evidences you would like to share?  \n
+    If you choose to submit the form to the police, fill out your personal data. \n
+    First Name \n
+    Last Name \n
+    Ethnicity \n
+    Sex \n
+    Address \n
+    Phone Number \n
+    `;
 
     const link = `mailto:?to=&subject=${encodeURIComponent(
       subject

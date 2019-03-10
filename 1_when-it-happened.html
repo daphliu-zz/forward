@@ -14,7 +14,7 @@
       type="text/css"
     />
     <link href="css/am-pm.css" rel="stylesheet" type="text/css" />
-
+    <script type="module" src="form.js"></script>
     <!-- add scripts -->
     <script src="js/jquery-1.8.3.js"></script>
     <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
@@ -289,16 +289,18 @@
           <div id="datepicker"></div>
         </label>
         <br />
-        <label>
-          What time did it happen?<br />
-          <input name="resp1_1" type="text" />
-          <p style="display: inline;">:</p>
-          <input name="resp1_2" type="text" />
-        </label>
-        <label class="ampm-switch">
-          <input type="checkbox" id="" name="" value="" checked="" />
-          <div class="toggle-button"></div>
-        </label>
+        <form>
+          <label>
+            What time did it happen?<br />
+            <input name="resp1_1" type="text" />
+            <p style="display: inline;">:</p>
+            <input name="resp1_2" type="text" />
+          </label>
+          <label class="ampm-switch">
+            <input type="checkbox" id="" name="" value="" checked="" />
+            <div class="toggle-button"></div>
+          </label>
+        </form>
         <br />
 
         <label>
