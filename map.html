@@ -139,6 +139,12 @@
           });
           markers = [];
 
+          const addr = places[0].formatted_address;
+          if (addr) {
+            input.value = places[0].formatted_address;
+            input.dispatchEvent(new Event("change", { bubbles: true }));
+          }
+
           // For each place, get the icon, name and location.
           var bounds = new google.maps.LatLngBounds();
           places.forEach(function(place) {

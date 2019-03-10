@@ -1,4 +1,4 @@
-// @ts-check
+import { set } from "./web_modules/idb-keyval.js";
 
 /**
  * @returns {Promise<Position>}
@@ -25,9 +25,16 @@ function geocode(options) {
   });
 }
 
-async function pickLocation() {
-  var input = document.getElementById("pac-input");
-}
+const addressResults = document.getElementById("addressResults");
+const iframe = document.querySelector("iframe");
+iframe.onload = () => {
+  const input = iframe.contentDocument.getElementById("pac-input");
+  input.addEventListener("change", evt => {
+    console.log("Change", evt.target.value);
+    addressResults.textContent = evt.target.value;
+    set("where", evt.target.value);
+  });
+};
 
 async function main() {
   const pos = await getCurrentPosition();
