@@ -1,18 +1,20 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Create HTML5 Canvas JavaScript Drawing App Example</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <script type="module" src="html5-canvas-drawing-app.js"></script>
     <script type="module" src="form.js"></script>
     <style>
       .canvasDiv {
-        position:absolute;
+        position: absolute;
         padding-top: 0px;
-        float:left;
+        float: left;
         top: 400px;
-        left:75px;
-
+        left: 75px;
       }
       .TopBanner{
     position: absolute;
@@ -221,21 +223,16 @@
           <circle cx="850" cy="25" r="20" fill="#C4C4C4" />
       </svg>
 
-      <p class="p1">Draw on the silhouette to show where your injures are.</p>
-      <p class="p2">If you'd like, you can elaborate about your injuries here.</p>
+    <p class="p1">Draw on the silhouette to show where your injures are.</p>
+    <p class="p2">If you'd like, you can elaborate about your injuries here.</p>
     <div id="canvasDiv" class="canvasDiv"></div>
     <h1>Physical Injuries</h1>
     <button id="clear" class="clear-button">Clear</button>
-    
-    <textarea id="text-area" rows="10"></textarea>
+    <form>
+      <textarea name="resp_4" id="text-area" rows="10"></textarea>
+    </form>
     <a href="3_what-happened.html"><button id="previous" class="prev-button" onclick="saveArray()">&lt;</button></a>
     <a href="5_assaulter.html"><button id="next" class="next-button">&gt;</button></a>
     <button type="button" id="send-email"><img src="images/Email%20icon.png">Export form</button>
-    
-    <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
-    <script type="text/javascript" src="html5-canvas-drawing-app.js"></script>
-    <script type="text/javascript">
-       drawingApp.init();
-	</script>
   </body>
 </html>
