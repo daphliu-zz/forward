@@ -1,23 +1,70 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <script type="module" src="form.js"></script>
-  </head>
-  <body>
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <meta name="author" content="Script Tutorials" />
+    <title>Datepicker jQuery UI - Demo 1 | Script Tutorials</title>
+
+    <!-- add styles -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/ui-lightness/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/am-pm.css" rel="stylesheet" type="text/css" />
+
+    <!-- add scripts -->
+    <script src="js/jquery-1.8.3.js"></script>
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+
+    <script>
+    $(function(){
+        $.datepicker.setDefaults(
+          $.extend($.datepicker.regional[''])
+        );
+        $('#datepicker').datepicker({
+          beforeShow: function(input) {
+            $(input).css('background-color','#ff0');
+          },
+          onSelect: function(dateText, obj) {
+            $(this).css('background-color','');
+            alert('Selected: ' + dateText +
+              "\n\nid: " + obj.id +
+              "\nselectedDay: " + obj.selectedDay +
+              "\nselectedMonth: " + obj.selectedMonth +
+              "\nselectedYear: " + obj.selectedYear);
+          },
+          onClose: function(dateText, obj) {
+            $(this).css('background-color','');
+          }
+        });
+    });
+    </script>
+</head>
+<body>
     <form>
-      <label
-        >When did the incident happen? <br />
-        <input name="1_resp" type="text" />
-      </label>
+        <label>When did the incident happen?<br />
+          <div id="datepicker"></div><br />
+          <label>What time did it happen?<br />
+            <input name="resp1" type="text"/>
+            <p style="display: inline;">:</p>
+            <input name="resp1" type="text"/>
+          </label>
+          <label class="ampm-switch">
+				    <input type="checkbox" id="" name="" value="" checked=""> 
+				    <div class="toggle-button"></div>
+			    </label>
+          <br />
+          <label>Would you like to elaborate about anything relating to when the incident happened?<br />
+            <input name="resp1" type="text" />
+          </label>
+          <br />
+        </label>
+
+        <br />
+      </form>
       <br />
-    </form>
-    <br />
-    <a href="index.html"><button>Previous</button></a>
-    <a href="2_where-it-happened.html"><button>Next</button></a>
-    <button type="button" id="send-email">Send email</button>
-  </body>
-</html>
+      <a href="index.html"><button>Previous</button></a>
+      <a href="2_where-it-happened.html"><button>Next</button></a>
+      <button type="button" id="send-email">Send email</button>
+</body>
