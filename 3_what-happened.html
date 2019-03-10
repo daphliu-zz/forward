@@ -39,14 +39,14 @@
                 position: relative;
                 width: 40%;
                 height: 63px;
-                top: 25%;
+                top: 50px;
 /*                left: 27%;*/
                 text-align: center;
                 font-family: Arial;
                 line-height: normal;
                 font-size: 48px;
                 margin: auto;
-                padding: 10px;
+                padding-bottom: 30px;
                 color: #000000;
                 
             }
@@ -60,7 +60,7 @@
             #note-textarea{
                 box-sizing: border-box;
                 width: 50%;
-                height: 30vh;
+                height: 300px;
                 margin: 20px 20px 20px 20px;
                 background: #FFFFFF;
                 /* Forward - light */
@@ -76,12 +76,12 @@
             #note-textarea::placeholder { 
                 width: 20em;
                 position: relative;
-                font-family: Roboto;
+                font-family: Arial;
                 font-style: normal;
                 font-weight: normal;
                 line-height: normal;
                 font-size: 24px;
-                text-align: center;
+                text-align: left;
                 color: #99CDE3;
 
 
@@ -90,7 +90,7 @@
             .recordButton{
                 position: absolute;
                 height: 50px;
-                top: calc(70% - 50px/2);
+                top: 710px;
                 
                 font-family: Arial;
                 line-height: 15px;
@@ -108,7 +108,7 @@
             }
             #recordPicture{
                 position: absolute;
-                top: calc(70% - 50px/2);
+                top: 700px;
                 left: 38%;
 
             }
@@ -127,14 +127,14 @@
             .previous{
                 position: absolute;
                 left: 5%;
-                top: 40%;
+                top: 400px;
                 background-color: white;             
                 border: 0px solid white;
             }
             .next{
                 position: absolute;              
                 right: 5%;
-                top: 40%;
+                top: 400px;
                 background-color: white;
                 border: 0px solid white;
             }
@@ -147,16 +147,18 @@
                 width: 100px;
             }
             .dotsContainer{
+                margin-top: 50px;
                 display: flex;
                 flex-direction: row;
-                margin-left:35%;
+                margin-left: 33%;
             }
             .circle{
+                
                 height: 28px;
                 width: 28px;
                 border-radius: 50%;
                 background-color: #C4C4C4;
-                top: 300px;
+                top: 100px;
                 margin: 17.5px;
                 
             }
@@ -164,7 +166,7 @@
             #send-email{
                 position: absolute;
                 left: 80%;
-                top: 80%;
+                top: 760px;
                 display: flex;
                 flex-direction: column;
                 text-align: center;
@@ -202,12 +204,13 @@
             <div class="formContainer">
             <form>
                 <label class="formQuestion"><div class="formLabel">What happened?</div><br />
-                    <textarea name="resp3" id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="10" ></textarea>
+                    <textarea name="resp3" id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="10" columns="100"></textarea>
                 </label>
                 <br />
             </form>
             </div>
             <br />
+            
 
             <a href="2_where-it-happened.html"><button class="previous"><img src="images/arrowLeft.png"></button></a>
             <a href="4_physical-trauma.html"><button class="next"><img src="images/arrowRight.png"></button></a>
