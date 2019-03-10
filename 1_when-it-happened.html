@@ -53,20 +53,21 @@
 
     .TopBanner{
 
-    position: absolute;
+/*    position: absolute;*/
     width: 100%;
     height: 60px;
 
     left: 0px;
     top: 0px;
     background: linear-gradient(180deg, rgba(82, 76, 76, 0.59) 0%, rgba(255, 255, 255, 0.06) 78.45%), #585F65;
+        position: fixed;
     }
     /*hello*/
 
 
 
     .ExitBanner{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 50px;
     left: 0px;
@@ -118,6 +119,29 @@
       top: 20px;
       z-index: 10;
     }
+        
+    .previous{
+            position: absolute;
+            left: 20px;
+            top: 400px;
+            background-color: white;             
+            border: 0px solid white;
+        }
+        .next{
+            position: absolute;              
+            right: 5%;
+            top: 400px;
+            background-color: white;
+            border: 0px solid white;
+        }
+        .previous img{
+            width: 100px;
+
+        }
+
+        .next img{
+            width: 100px;
+        }
 
     </style>
   </head>
@@ -155,41 +179,26 @@
           <input type="checkbox" id="" name="" value="" checked="" />
           <div class="toggle-button"></div>
         </label>
-        <br />
+        <br/>
 
-        <label
-          >When did the incident happen?
-          <br />
-          <div id="datepicker"></div>
-          <br />
-          <label
-            >What time did it happen?<br />
-            <input name="resp1" type="text" />
-            <p style="display: inline;">:</p>
-            <input name="resp1" type="text" />
-          </label>
-          <label class="ampm-switch">
-            <input type="checkbox" id="" name="" value="" checked="" />
-            <div class="toggle-button"></div>
-          </label>
-          <br />
+    
           <label
             >Would you like to elaborate about anything relating to when the
             incident happened?<br />
             <input name="resp1" type="text" />
           </label>
-        <br />
+        <br/>
       </label>
 
-        <br />
+        <br/>
       </form>
       <br/>
-      <a href="index.html"><button>Previous</button></a>
-      <a href="2_where-it-happened.html"><button>Next</button></a>
+    </div>
+      <a href="index.html"><button class="previous"><img src="images/arrowLeft.png"></button></a>
+      <a href="2_where-it-happened.html"><button class="next"><img src="images/arrowRight.png"></button></a>
       <button type="button" id="send-email">Send email</button>
       <a href="tel:+1-778-680-8965" style="text-decoration: none"
-        ><button><b>Call 911</b></button></a
-      >
-    </div>
+        ><button><b>Call 911</b></button></a>
+    
   </body>
 </html>
