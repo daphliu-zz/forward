@@ -25,6 +25,10 @@ function geocode(options) {
   });
 }
 
+async function pickLocation() {
+  var input = document.getElementById("pac-input");
+}
+
 async function main() {
   const pos = await getCurrentPosition();
   console.log(pos.coords);
