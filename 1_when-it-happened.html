@@ -54,10 +54,8 @@
         margin: 0;
       }
       .TopBanner {
-        /*    position: absolute;*/
+        height: 80px;
         width: 100%;
-        height: 60px;
-
         left: 0px;
         top: 0px;
         background: linear-gradient(
@@ -66,7 +64,6 @@
             rgba(255, 255, 255, 0.06) 78.45%
           ),
           #585f65;
-        position: absolute;
       }
       /*hello*/
 
@@ -76,26 +73,43 @@
         height: 50px;
         left: 0px;
 
-        margin-top: 50px;
+        margin-top: 0px;
         background: #edb5bf;
       }
-
-      .ExitBannerText {
+      #send-email {
         position: absolute;
-        width: 1315.71px;
-        height: 106.2px;
-        left: 20px;
-
-        top: 50px;
-
-        font-family: Arial;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        font-size: 30px;
+        right:0%;
+        top: 130px;
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        color: #5f6366;
+        font-family: Arial;
+        font-weight: 800;
+        background-color: white;
+        border: 0px solid white;
       }
+      #send-email img {
+        width: 7rem;
+        right: 0;
+        bottom: 0;
+      }
+
+      .ExitBannerText{
+    position: absolute;
+    width: 1315.71px;
+    height: 106.2px;
+    margin-left: -650px;
+    left: 50%;
+    top: 80px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 30px;
+    text-align: center;
+    color:black;
+    text-decoration:none;
+  }
       #bold {
         font-weight: 800;
         font-size: 40px;
@@ -110,15 +124,15 @@
       }
 
       .logo img {
-        height: 60px;
+        height: 100px;
         width: auto;
       }
       .CallButton svg {
         position: absolute;
-        height: 50px;
+        height: 70px;
         width: auto;
         right: 10px;
-        top: 20px;
+        top: 15px;
         z-index: 10;
       }
 
@@ -140,6 +154,11 @@
         width: 100px;
       }
 
+      svg {
+        position: absolute;
+        top: 170px;
+        margin-left: 0px;
+      }
       .next img {
         width: 100px;
       }
@@ -181,18 +200,20 @@
     <div class="ExitBannerText">
       <span id="bold">Exit</span> If you need to exit this page quickly
     </div>
-    <div class="content">
-      <svg height="50" width="875">
-        <circle cx="50" cy="25" r="20" fill="#C4C4C4" />
+    <svg height="50" width="875">
+        <circle cx="50" cy="25" r="20" fill="#675682" />
         <circle cx="150" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="250" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="350" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="450" cy="25" r="20" fill="#675682" />
+        <circle cx="450" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="550" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="650" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="750" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="850" cy="25" r="20" fill="#C4C4C4" />
       </svg>
+
+    <div class="content">
+      
       <form>
         <label>
           When did the incident happen?
@@ -248,6 +269,10 @@
           <img src="images/arrowRight.png" />
         </button>
       </a>
+      
     </div>
+    <button type="button" id="send-email" style="position:absolute; right:0px;">
+        <img src="images/Email%20icon.png" />Export form
+      </button>
   </body>
 </html>
