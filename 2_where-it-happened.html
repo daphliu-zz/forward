@@ -16,6 +16,18 @@
     <link rel="stylesheet" href="css/banner.css" />
 >>>>>>> f3dc812a6cd2f168858dfd27b2f67ae86ce05c9d
     <title>Document</title>
+    <style>
+      svg {
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        margin-left: -450px;
+      }
+      .formContainer {
+        position: absolute;
+        top: 200px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -25,18 +37,19 @@
           <strong>Exit</strong> If you need to exit this page quickly
         </a>
       </div>
-      <svg height="50" width="875">
-        <circle cx="50" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="150" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="250" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="350" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="450" cy="25" r="20" fill="#675682" />
-        <circle cx="550" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="650" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="750" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="850" cy="25" r="20" fill="#C4C4C4" />
-      </svg>
     </header>
+
+    <svg height="50" width="875">
+      <circle cx="50" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="150" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="250" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="350" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="450" cy="25" r="20" fill="#675682" />
+      <circle cx="550" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="650" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="750" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="850" cy="25" r="20" fill="#C4C4C4" />
+    </svg>
 
     <form class="formContainer">
       <h1>Where did the incident happen?</h1>
@@ -45,16 +58,6 @@
 
       <p id="addressResults"></p>
 
-      <a href="1_when-it-happened.html">
-        <button type="button" class="previous">
-          <img src="images/arrowLeft.png" />
-        </button>
-      </a>
-      <a href="3_what-happened.html">
-        <button type="button" class="next">
-          <img src="images/arrowRight.png" />
-        </button>
-      </a>
       <button type="button" id="send-email">
         <img src="images/Email%20icon.png" />Export form
       </button>
@@ -67,5 +70,15 @@
         </iframe>
       </div>
     </form>
+    <a href="1_when-it-happened.html">
+      <button type="button" class="previous">
+        <img src="images/arrowLeft.png" />
+      </button>
+    </a>
+    <a href="3_what-happened.html">
+      <button type="button" class="next">
+        <img src="images/arrowRight.png" />
+      </button>
+    </a>
   </body>
 </html>

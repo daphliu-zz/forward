@@ -1,4 +1,4 @@
-import { get, set } from "/web_modules/idb-keyval.js";
+import { get, set } from "./web_modules/idb-keyval.js";
 
 const container = document.querySelector("#images-container");
 
