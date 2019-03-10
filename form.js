@@ -30,8 +30,6 @@ if (email != null) {
     let arr = await Promise.all([
       get("resp1_1"),
       get("resp1_2"),
-      get("resp1_3"),
-      get("resp1_4"),
       get("res3"),
       get("res2"),
       get("res2"),
