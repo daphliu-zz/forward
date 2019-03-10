@@ -1,4 +1,4 @@
-import { get, set, keys } from "/web_modules/idb-keyval.js";
+import { get, set, keys } from "./web_modules/idb-keyval.js";
 
 async function load() {
   const inputNames = await keys();
@@ -14,7 +14,7 @@ async function load() {
   document.getElementById("first-name").textContent = data[0];
   document.getElementById("last-name").textContent = data[1];
   document.getElementById("ethnicity").textContent = data[2];
-  if(data[3] == "M") {
+  if (data[3] == "M") {
     document.getElementById("male").textContent = "X";
     document.getElementById("female").textContent = "";
   } else {

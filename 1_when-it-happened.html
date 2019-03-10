@@ -49,107 +49,114 @@
     </script>
     <script type="module" src="form.js"></script>
     <style>
+      body {
+        margin: 0;
+      }
+      .TopBanner {
+        /*    position: absolute;*/
+        width: 100%;
+        height: 60px;
 
+        left: 0px;
+        top: 0px;
+        background: linear-gradient(
+            180deg,
+            rgba(82, 76, 76, 0.59) 0%,
+            rgba(255, 255, 255, 0.06) 78.45%
+          ),
+          #585f65;
+        position: absolute;
+      }
+      /*hello*/
 
-    .TopBanner{
+      .ExitBanner {
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        left: 0px;
 
-/*    position: absolute;*/
-    width: 100%;
-    height: 60px;
+        margin-top: 50px;
+        background: #edb5bf;
+      }
 
-    left: 0px;
-    top: 0px;
-    background: linear-gradient(180deg, rgba(82, 76, 76, 0.59) 0%, rgba(255, 255, 255, 0.06) 78.45%), #585F65;
-        position: fixed;
-    }
-    /*hello*/
+      .ExitBannerText {
+        position: absolute;
+        width: 1315.71px;
+        height: 106.2px;
+        left: 20px;
 
+        top: 50px;
 
+        font-family: Arial;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 30px;
+        text-align: center;
+        color: #5f6366;
+      }
+      #bold {
+        font-weight: 800;
+        font-size: 40px;
+      }
 
-    .ExitBanner{
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    left: 0px;
+      .content {
+        padding-top: 15%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        text-align: center;
+      }
 
-    margin-top: 50px;
-    background: #EDB5BF;
-    }
+      .logo img {
+        height: 60px;
+        width: auto;
+      }
+      .CallButton svg {
+        position: absolute;
+        height: 50px;
+        width: auto;
+        right: 10px;
+        top: 20px;
+        z-index: 10;
+      }
 
+      .previous {
+        position: absolute;
+        left: 20px;
+        top: 400px;
+        background-color: white;
+        border: 0px solid white;
+      }
+      .next {
+        position: absolute;
+        right: 5%;
+        top: 400px;
+        background-color: white;
+        border: 0px solid white;
+      }
+      .previous img {
+        width: 100px;
+      }
 
-    .ExitBannerText{
-    position: absolute;
-    width: 1315.71px;
-    height: 106.2px;
-    left: 20px;
-
-    top: 50px;
-
-
-    font-family: Arial;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-size: 30px;
-    text-align: center;
-    color: #5F6366;
-  }
-    #bold{
-     font-weight: 800;
-     font-size: 40px;
-    }
-
-    .content{
-      padding-top:15%;
-      position:absolute;
-      margin-left: 35%;
-      margin-right: auto;
-
-    }
-
-    .logo img{
-      height:60px;
-      width:auto;
-    }
-    .CallButton svg{
-      position:absolute;
-      height: 50px;
-      width:auto;
-      right:10px;
-      top: 20px;
-      z-index: 10;
-    }
-        
-    .previous{
-            position: absolute;
-            left: 20px;
-            top: 400px;
-            background-color: white;             
-            border: 0px solid white;
-        }
-        .next{
-            position: absolute;              
-            right: 5%;
-            top: 400px;
-            background-color: white;
-            border: 0px solid white;
-        }
-        .previous img{
-            width: 100px;
-
-        }
-
-        .next img{
-            width: 100px;
-        }
-
+      .next img {
+        width: 100px;
+      }
+      .ui-datepicker {
+        margin: auto;
+      }
+      .ampm-switch {
+        text-align: left;
+      }
     </style>
   </head>
 
   <body>
     <div class="TopBanner">
-      <div class="logo"><img src="images/forward_logo.png" alt="logo" /></div>
-      <div class="CallButton">
+      <div class="logo">
+        <img src="images/forward_logo.png" alt="Forward" />
+      </div>
+      <a class="CallButton" href="tel:+1-778-680-8965">
         <svg
           width="250"
           height="94"
@@ -167,24 +174,13 @@
             fill="#FF0000"
           />
         </svg>
-      </div>
+      </a>
     </div>
     <div class="ExitBanner"></div>
     <div class="ExitBannerText">
       <span id="bold">Exit</span> If you need to exit this page quickly
     </div>
     <div class="content">
-      <svg height="50" width="875">
-        <circle cx="50" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="150" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="250" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="350" cy="25" r="20" fill="#675682" />
-        <circle cx="450" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="550" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="650" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="750" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="850" cy="25" r="20" fill="#C4C4C4" />
-      </svg>
       <form>
         <label>
           When did the incident happen?
@@ -207,8 +203,8 @@
         <label>
           When did the incident happen?
           <br />
-          <div id="datepicker"></div
-        ></label>
+          <div id="datepicker"></div>
+        </label>
         <br />
         <label
           >What time did it happen?<br />
@@ -220,14 +216,26 @@
           <input type="checkbox" id="" name="" value="" checked="" />
           <div class="toggle-button"></div>
         </label>
+        <br />
+        <label
+          >Would you like to elaborate about anything relating to when the
+          incident happened?<br />
+          <input name="resp1" type="text" />
+        </label>
+        <br />
 
-    
-          <label
-            >Would you like to elaborate about anything relating to when the
-            incident happened?<br />
-            <input name="resp1" type="text" />
-          </label>
-        <br/>
-      </label>
-
-        <br/>
+        <br />
+      </form>
+      <a href="index.html">
+        <button type="button" class="previous">
+          <img src="images/arrowLeft.png" />
+        </button>
+      </a>
+      <a href="2_where-it-happened.html">
+        <button type="button" class="next">
+          <img src="images/arrowRight.png" />
+        </button>
+      </a>
+    </div>
+  </body>
+</html>

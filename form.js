@@ -1,4 +1,4 @@
-import { get, set, keys } from "/web_modules/idb-keyval.js";
+import { get, set, keys } from "./web_modules/idb-keyval.js";
 
 const form = document.querySelector("form");
 
