@@ -79,7 +79,7 @@
       #send-email {
         position: absolute;
         right:0%;
-        top: 130px;
+        top: 135px;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -116,7 +116,7 @@
       }
 
       .content {
-        padding-top: 15%;
+        padding-top: 130px;
         margin-left: auto;
         margin-right: auto;
         width: 70%;
@@ -198,9 +198,9 @@
     </div>
     <div class="ExitBanner"></div>
     <div class="ExitBannerText">
-      <span id="bold">Exit</span> If you need to exit this page quickly
-    </div>
-    <svg height="50" width="875">
+        <a href="https://www.google.ca" style="text-decoration: none; color: black;"><span id="bold">Exit</span> If you need to exit this page quickly</a>
+      </div>
+    <svg height="50" width="875" style="left: 50%;margin-left: -450px;">
         <circle cx="50" cy="25" r="20" fill="#675682" />
         <circle cx="150" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="250" cy="25" r="20" fill="#C4C4C4" />
@@ -215,45 +215,38 @@
     <div class="content">
       
       <form>
-        <label>
+          <br />
+
+        <h1>
           When did the incident happen?
           <br />
-          <div id="datepicker"></div>
-        </label>
+          
+        </h1>
+        <div id="datepicker"></div>
         <br />
         <label>
           What time did it happen?<br />
-          <input name="resp1" type="text" />
+          <input name="resp1" type="text" style="border:1px solid #99CDE3;"/>
           <p style="display: inline;">:</p>
-          <input name="resp1" type="text" />
+          <input name="resp1" type="text" style="border:1px solid rgb(38, 65, 77);"/>
         </label>
         <label class="ampm-switch">
           <input type="checkbox" id="" name="" value="" checked="" />
           <div class="toggle-button"></div>
         </label>
         <br />
-
-        <label>
-          When did the incident happen?
-          <br />
-          <div id="datepicker"></div>
-        </label>
-        <br />
-        <label
-          >What time did it happen?<br />
-          <input name="resp1" type="text" />
-          <p style="display: inline;">:</p>
-          <input name="resp1" type="text" />
-        </label>
-        <label class="ampm-switch">
-          <input type="checkbox" id="" name="" value="" checked="" />
-          <div class="toggle-button"></div>
-        </label>
+      
+      
         <br />
         <label
           >Would you like to elaborate about anything relating to when the
           incident happened?<br />
-          <input name="resp1" type="text" />
+          <br />
+          <textarea name="resp1" type="text"style="
+
+          width: 40%;
+          border-color:#99CDE3;
+          right:15%;"></textarea>
         </label>
         <br />
 

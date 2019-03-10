@@ -114,18 +114,3 @@ body {
   margin: 17.5px;
 }
 
-#send-email {
-  position: absolute;
-  left: 80%;
-  top: 760px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-family: Arial;
-  font-weight: 800;
-  background-color: white;
-  border: 0px solid white;
-}
-#send-email img {
-  width: 7rem;
-}
