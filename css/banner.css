@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.TopBanner {
+  height: 80px;
+  background: linear-gradient(
+      180deg,
+      rgba(82, 76, 76, 0.59) 0%,
+      rgba(255, 255, 255, 0.06) 78.45%
+    ),
+    #585f65;
+}
+.ExitBanner {
+  height: 60px;
+
+  /* Forward - Pink */
+  background: #edb5bf;
+}
+.ExitBannerText {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+/*            */
+.formLabel {
+  position: relative;
+  width: 40%;
+  height: 63px;
+  top: 50px;
+  /*                left: 27%;*/
+  text-align: center;
+  font-family: Arial;
+  line-height: normal;
+  font-size: 48px;
+  margin: auto;
+  padding-bottom: 30px;
+  color: #000000;
+}
+.formContainer {
+  left: 10%;
+  right: 10%;
+  text-align: center;
+}
+
+#note-textarea {
+  box-sizing: border-box;
+  width: 50%;
+  height: 300px;
+  margin: 20px 20px 20px 20px;
+  background: #ffffff;
+  /* Forward - light */
+  border: 1px solid #99cde3;
+  box-sizing: border-box;
+  border-radius: 3px;
+  resize: none;
+  overflow: hidden;
+  position: absolute;
+  left: 26%;
+}
+#note-textarea::placeholder {
+  width: 20em;
+  position: relative;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 24px;
+  text-align: left;
+  color: #99cde3;
+}
+
+.previous {
+  position: absolute;
+  left: 5%;
+  top: 400px;
+  background-color: white;
+  border: 0px solid white;
+}
+.next {
+  position: absolute;
+  right: 5%;
+  top: 400px;
+  background-color: white;
+  border: 0px solid white;
+}
+.previous img {
+  width: 100px;
+}
+
+.next img {
+  width: 100px;
+}
+.dotsContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 33%;
+}
+.circle {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  top: 100px;
+  margin: 17.5px;
+}
+
+#send-email {
+  position: absolute;
+  left: 80%;
+  top: 760px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: Arial;
+  font-weight: 800;
+  background-color: white;
+  border: 0px solid white;
+}
+#send-email img {
+  width: 7rem;
+}

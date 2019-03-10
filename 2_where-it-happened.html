@@ -10,25 +10,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script type="module" src="map.js"></script>
+    <link rel="stylesheet" href="css/banner.css" />
     <title>Document</title>
+    <style>
+      svg {
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        margin-left: -450px;
+      }
+      .formContainer {
+        position: absolute;
+        top: 200px;
+      }
+    </style>
   </head>
   <body>
-    <form>
-      <label
-        >Where did the incident happen?<br />
-        <input name="resp2" type="text" />
-      </label>
+    <header>
+      <div class="TopBanner"></div>
+      <div class="ExitBanner">
+        <a href="https://www.google.ca" class="ExitBannerText">
+          <strong>Exit</strong> If you need to exit this page quickly
+        </a>
+      </div>
+    </header>
+
+    <svg height="50" width="875">
+      <circle cx="50" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="150" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="250" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="350" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="450" cy="25" r="20" fill="#675682" />
+      <circle cx="550" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="650" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="750" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="850" cy="25" r="20" fill="#C4C4C4" />
+    </svg>
+
+    <form class="formContainer">
+      <h1>Where did the incident happen?</h1>
+      <input name="resp2" type="text" />
       <br />
+
+      <p id="addressResults"></p>
+
+      <button type="button" id="send-email">
+        <img src="images/Email%20icon.png" />Export form
+      </button>
+
+      <a href="tel:+1-778-680-8965" style="text-decoration: none"
+        ><button><b>Call 911</b></button></a
+      >
+      <div>
+        <iframe src="map.html" frameborder="0" height="300" width="400">
+        </iframe>
+      </div>
     </form>
-    <p id="addressResults"></p>
-    <a href="1_when-it-happened.html"><button>Previous</button></a>
-    <a href="3_what-happened.html"><button>Next</button></a>
-    <button type="button" id="send-email">Send email</button>
-    <a href="tel:+1-778-680-8965" style="text-decoration: none"
-      ><button><b>Call 911</b></button></a
-    >
-    <div>
-      <iframe src="map.html" frameborder="0" height="300" width="400"> </iframe>
-    </div>
+    <a href="1_when-it-happened.html">
+      <button type="button" class="previous">
+        <img src="images/arrowLeft.png" />
+      </button>
+    </a>
+    <a href="3_what-happened.html">
+      <button type="button" class="next">
+        <img src="images/arrowRight.png" />
+      </button>
+    </a>
   </body>
 </html>
