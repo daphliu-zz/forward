@@ -5,7 +5,8 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <meta name="author" content="Script Tutorials" />
-    <title>Datepicker jQuery UI - Demo 1 | Script Tutorials</title>
+    <script type="module" src="form.js"></script>
+    <title></title>
 
     <!-- add styles -->
     <link
@@ -14,7 +15,7 @@
       type="text/css"
     />
     <link href="css/am-pm.css" rel="stylesheet" type="text/css" />
-    <script type="module" src="form.js"></script>
+
     <!-- add scripts -->
     <script src="js/jquery-1.8.3.js"></script>
     <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
@@ -49,104 +50,12 @@
     </script>
     <script type="module" src="form.js"></script>
     <style>
-      .TopBanner {
-        /*    position: absolute;*/
-        width: 100%;
-        height: 60px;
-
-        left: 0px;
-        top: 0px;
-        background: linear-gradient(
-            180deg,
-            rgba(82, 76, 76, 0.59) 0%,
-            rgba(255, 255, 255, 0.06) 78.45%
-          ),
-          #585f65;
-        position: fixed;
-      }
-      /*hello*/
-
-      .ExitBanner {
-        position: fixed;
-        width: 100%;
-        height: 50px;
-        left: 0px;
-
-        margin-top: 50px;
-        background: #edb5bf;
-      }
-
-      .ExitBannerText {
-        position: absolute;
-        width: 100%;
-        height: 106.2px;
-        left: 20px;
-
-        top: 50px;
-
-        font-family: Arial;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        font-size: 30px;
-        text-align: center;
-        color: #5f6366;
-      }
-      #bold {
-        font-weight: 800;
-        font-size: 40px;
-      }
-
-      .content {
-        padding-top: 15%;
-        position: absolute;
-        margin-left: 35%;
-        margin-right: auto;
-      }
-
-      .logo img {
-        height: 60px;
-        width: auto;
-      }
-      .CallButton svg {
-        position: absolute;
-        height: 50px;
-        width: auto;
-        right: 10px;
-        top: 20px;
-        z-index: 10;
-      }
-
-      .previous {
-        position: absolute;
-        left: 20px;
-        top: 400px;
-        background-color: white;
-        border: 0px solid white;
-      }
-      .next {
-        position: absolute;
-        right: 5%;
-        top: 400px;
-        background-color: white;
-        border: 0px solid white;
-      }
-      .previous img {
-        width: 100px;
-      }
-
-      .next img {
-        width: 100px;
-      }
-
       body {
         margin: 0;
       }
       .TopBanner {
-        /*    position: absolute;*/
+        height: 80px;
         width: 100%;
-        height: 60px;
-
         left: 0px;
         top: 0px;
         background: linear-gradient(
@@ -155,7 +64,6 @@
             rgba(255, 255, 255, 0.06) 78.45%
           ),
           #585f65;
-        position: absolute;
       }
       /*hello*/
 
@@ -165,26 +73,43 @@
         height: 50px;
         left: 0px;
 
-        margin-top: 50px;
+        margin-top: 0px;
         background: #edb5bf;
       }
-
-      .ExitBannerText {
+      #send-email {
         position: absolute;
-        width: 1315.71px;
-        height: 106.2px;
-        left: 20px;
-
-        top: 50px;
-
-        font-family: Arial;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        font-size: 30px;
+        right:0%;
+        top: 135px;
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        color: #5f6366;
+        font-family: Arial;
+        font-weight: 800;
+        background-color: white;
+        border: 0px solid white;
       }
+      #send-email img {
+        width: 7rem;
+        right: 0;
+        bottom: 0;
+      }
+
+      .ExitBannerText{
+    position: absolute;
+    width: 1315.71px;
+    height: 106.2px;
+    margin-left: -650px;
+    left: 50%;
+    top: 80px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 30px;
+    text-align: center;
+    color:black;
+    text-decoration:none;
+  }
       #bold {
         font-weight: 800;
         font-size: 40px;
@@ -199,15 +124,15 @@
       }
 
       .logo img {
-        height: 60px;
+        height: 100px;
         width: auto;
       }
       .CallButton svg {
         position: absolute;
-        height: 50px;
+        height: 70px;
         width: auto;
         right: 10px;
-        top: 20px;
+        top: 15px;
         z-index: 10;
       }
 
@@ -229,6 +154,11 @@
         width: 100px;
       }
 
+      svg {
+        position: absolute;
+        top: 170px;
+        margin-left: 0px;
+      }
       .next img {
         width: 100px;
       }
@@ -268,62 +198,55 @@
     </div>
     <div class="ExitBanner"></div>
     <div class="ExitBannerText">
-      <span id="bold">Exit</span> If you need to exit this page quickly
-    </div>
-    <div class="content">
-      <svg height="50" width="875">
-        <circle cx="50" cy="25" r="20" fill="#C4C4C4" />
+        <a href="https://www.google.ca" style="text-decoration: none; color: black;"><span id="bold">Exit</span> If you need to exit this page quickly</a>
+      </div>
+    <svg height="50" width="875" style="left: 50%;margin-left: -450px;">
+        <circle cx="50" cy="25" r="20" fill="#675682" />
         <circle cx="150" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="250" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="350" cy="25" r="20" fill="#C4C4C4" />
-        <circle cx="450" cy="25" r="20" fill="#675682" />
+        <circle cx="450" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="550" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="650" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="750" cy="25" r="20" fill="#C4C4C4" />
         <circle cx="850" cy="25" r="20" fill="#C4C4C4" />
       </svg>
-      <form>
-        <label>
-          When did the incident happen?
-          <br />
-          <div id="datepicker"></div>
-        </label>
-        <br />
-        <form>
-          <label>
-            What time did it happen?<br />
-            <input name="resp1_1" type="text" />
-            <p style="display: inline;">:</p>
-            <input name="resp1_2" type="text" />
-          </label>
-          <label class="ampm-switch">
-            <input type="checkbox" id="" name="" value="" checked="" />
-            <div class="toggle-button"></div>
-          </label>
-        </form>
-        <br />
 
-        <label>
+    <div class="content">
+      
+      <form>
+          <br />
+
+        <h1>
           When did the incident happen?
           <br />
-          <div id="datepicker"></div>
-        </label>
+          
+        </h1>
+        <div id="datepicker"></div>
         <br />
-        <label
-          >What time did it happen?<br />
-          <input name="resp1_3" type="text" />
+        <label>
+          What time did it happen?<br />
+          <input name="resp1" type="text" style="border:1px solid #99CDE3;"/>
           <p style="display: inline;">:</p>
-          <input name="resp1_4" type="text" />
+          <input name="resp1" type="text" style="border:1px solid rgb(38, 65, 77);"/>
         </label>
         <label class="ampm-switch">
           <input type="checkbox" id="" name="" value="" checked="" />
           <div class="toggle-button"></div>
         </label>
         <br />
+      
+      
+        <br />
         <label
           >Would you like to elaborate about anything relating to when the
           incident happened?<br />
-          <input name="resp1_5" type="text" />
+          <br />
+          <textarea name="resp1" type="text"style="
+
+          width: 40%;
+          border-color:#99CDE3;
+          right:15%;"></textarea>
         </label>
         <br />
 
@@ -339,6 +262,10 @@
           <img src="images/arrowRight.png" />
         </button>
       </a>
+      
     </div>
+    <button type="button" id="send-email" style="position:absolute; right:0px;">
+        <img src="images/Email%20icon.png" />Export form
+      </button>
   </body>
 </html>
