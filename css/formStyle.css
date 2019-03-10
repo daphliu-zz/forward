@@ -1,0 +1,72 @@
+
+
+/* Form CSS styles */
+.navigationDot{
+    position: absolute;
+    width: 721px;
+    height: 28px;
+    left: 359px;
+    top: 248px;
+
+}
+
+.formQuestion{
+    position: absolute;
+    width: 552px;
+    height: 63px;
+
+    font-family: Arial;
+    line-height: normal;
+    font-size: 48px;
+    text-align: center;
+
+    color: #000000;
+
+}
+
+.inputField{
+    position: absolute;
+    width: 571px;
+    height: 54px;
+
+    background: #FFFFFF;
+    /* Forward - light */
+    border: 1px solid #99CDE3;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.placeHolderText{
+    position: absolute;
+    width: 89px;
+    height: 29px;
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    text-align: center;
+
+    color: #99CDE3;
+
+}
+
+.textExplanationForm{
+    position: absolute;
+    width: 369px;
+    height: 64px;
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    color: #5F6366;
+
+}
+
+.yesNoRadioButtonSelection{
+    
+}
+

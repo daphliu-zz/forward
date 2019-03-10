@@ -1,0 +1,376 @@
+
+/*Common sections*/
+.TopBanner{
+
+position: absolute;
+width: 1440px;
+height: 106px;
+left: 0px;
+top: 0px;
+}
+
+.ExitBanner{
+position: absolute;
+width: 1452px;
+height: 107.2px;
+left: 0px;
+top: 105px;
+
+}
+
+.ExitBannerText{
+  position: absolute;
+width: 1315.71px;
+height: 106.2px;
+left: 20px;
+top: 106px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+font-size: 48px;
+text-align: center;
+
+color: #5F6366;
+
+}
+
+
+
+/* Landing Page*/
+.ArrowBanner{
+  position: absolute;
+width: 1574px;
+height: 533px;
+left: -61px;
+top: -44px;
+
+}
+
+.ArrowBannerText{
+
+position: absolute;
+width: 1574px;
+height: 261px;
+left: -61px;
+top: 228px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 48px;
+text-align: center;
+
+color: #5F6366;
+}
+
+.MainTitle{
+
+position: absolute;
+width: 672px;
+height: 91px;
+left: 362px;
+top: 472px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+font-size: 64px;
+text-align: center;
+text-decoration-line: underline;
+
+color: #5F6366;
+}
+
+.Content{
+
+position: absolute;
+width: 900px;
+height: 42px;
+left: 270px;
+top: 612px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+font-size: 48px;
+text-align: center;
+
+color: #5F6366;
+
+}
+
+/* Steps: */
+.SecondaryTitle{
+
+position: absolute;
+width: 221px;
+height: 91px;
+left: 23px;
+top: 63px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+font-size: 64px;
+text-align: center;
+text-decoration-line: underline;
+
+color: #5F0F4E;
+}
+
+.FirstBackgroundArrow{
+  position: absolute;
+width: 1259px;
+height: 388.66px;
+left: -442px;
+top: 96px;
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* 1 */
+.Arrowone{
+position: absolute;
+width: 97px;
+height: 204px;
+left: 10px;
+top: 189px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+font-size: 144px;
+text-align: center;
+
+color: #675682;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+
+.FirstBackgroundArrowText{
+
+position: absolute;
+width: 441px;
+height: 49px;
+left: 134px;
+top: 240px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 36px;
+text-align: center;
+
+color: #5F6366;
+
+}
+
+.SecondBackgroundArrow{
+
+position: absolute;
+width: 1817.95px;
+height: 610px;
+left: -524px;
+top: 218px;
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* 2 */
+.ArrowTwo{
+position: absolute;
+width: 97px;
+height: 204px;
+left: 168px;
+top: 417px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+font-size: 144px;
+text-align: center;
+
+color: #99CDE3;
+
+/* Forward - light */
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+
+.SecondBackgroundArrowText{
+  position: absolute;
+width: 543px;
+height: 71px;
+left: 343px;
+top: 464px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 36px;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+
+.ThirdBackgroundArrow{
+
+position: absolute;
+width: 1703.88px;
+height: 526px;
+left: -88px;
+top: 536px;
+
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* 3 */
+.ArrowThree{
+  position: absolute;
+width: 97px;
+height: 204px;
+left: 91px;
+top: 679px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+font-size: 144px;
+text-align: center;
+
+color: #675682;
+
+/* Forward - Rust */
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ThirdBackgroundArrowText{
+  position: absolute;
+width: 692px;
+height: 106px;
+left: 194px;
+top: 752px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 36px;
+text-align: center;
+
+color: #5F6366;
+}
+
+/* Resources */
+.ThirdTitle{
+  position: absolute;
+width: 370px;
+height: 91px;
+left: 185px;
+top: 71px;
+
+font-family: Arial;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+font-size: 64px;
+text-align: center;
+text-decoration-line: underline;
+
+color: #5F0F4E;
+
+}
+
+.BlueSliderOne{
+  position: absolute;
+  width: 965px;
+  height: 65px;
+  left: 200px;
+  top: 227px;
+
+  background: url(blue slider.png);
+}
+
+.BlueSliderOneText{
+
+  position: absolute;
+  width: 1067px;
+  height: 90px;
+  left: 267px;
+  top: 242px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 36px;
+
+  color: #5F0F4E;
+
+}
+.BlueSliderTwo{
+  position: absolute;
+  width: 942px;
+  height: 97px;
+  left: 249px;
+  top: 341px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 37.5652px;
+
+  color: #5F0F4E;
+
+}
+.BlueSliderTwoText{
+
+  position: absolute;
+  width: 942px;
+  height: 97px;
+  left: 249px;
+  top: 341px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 37.5652px;
+
+  color: #5F0F4E;
+
+}
+.BlueSliderThree{
+  position: absolute;
+  width: 965px;
+  height: 65px;
+  left: 200px;
+  top: 438px;
+
+  background: url(blue slider.png);
+}
+.BlueSliderThreetext{
+  position: absolute;
+  width: 974px;
+  height: 82px;
+  left: 267px;
+  top: 449px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 37.5652px;
+
+  color: #5F0F4E;
+}
