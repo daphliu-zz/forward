@@ -48,11 +48,56 @@
       });
     </script>
     <script type="module" src="form.js"></script>
+    <style>
+    .TopBanner{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(180deg, rgba(82, 76, 76, 0.59) 0%, rgba(255, 255, 255, 0.06) 78.45%), #585F65;
+    }
+    /*hello*/
+    .ExitBanner{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0px;
+    margin-top: 72px;
+    background: #EDB5BF;
+    }
+    .ExitBannerText{
+    position: absolute;
+    width: 1315.71px;
+    height: 106.2px;
+    left: 20px;
+    top: 75px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 30px;
+    text-align: center;
+    color: #5F6366;
+  }
+    #bold{
+     font-weight: 800;
+     font-size: 40px;
+    }
+    </style>
   </head>
+
+
   <body>
+    <div class="TopBanner">
+
+    </div>
+    <div class="ExitBanner"></div>
     <form>
+      <div class="ExitBannerText"> <span id="bold">Exit</span> If you need to exit this page quickly </div>
       <label
-        >When did the incident happen?<br />
+        >When did the incident happen?
+        <br />
         <div id="datepicker"></div>
         <br />
         <label
