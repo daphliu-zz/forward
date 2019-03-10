@@ -1,375 +1,396 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Create HTML5 Canvas JavaScript Drawing App Example</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="toggle-divs.js"></script>
     <script type="text/javascript" src="duplicate.js"></script>
+    <script type="module" src="form.js"></script>
     <style>
       .canvasDiv {
-        position:absolute;
+        position: absolute;
         padding-top: 0px;
-        float:left;
+        float: left;
         top: 400px;
-        left:75px;
-
+        left: 75px;
       }
-      .TopBanner{
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    left: 0px;
-    top: 0px;
-    background: linear-gradient(180deg, rgba(82, 76, 76, 0.59) 0%, rgba(255, 255, 255, 0.06) 78.45%), #585F65;
-    }
-    /*hello*/
-    .ExitBanner{
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    left: 0px;
-    margin-top: 72px;
-    background: #EDB5BF;
-    }
-    .ExitBannerText{
-    position: absolute;
-    width: 1315.71px;
-    height: 106.2px;
-    margin-left: -650px;
-    left: 50%;
-    top: 80px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-size: 30px;
-    text-align: center;
-    color:black;
-    text-decoration:none;
-  }
-    #bold{
-     font-weight: 800;
-     font-size: 40px;
-    }
-    svg {
-      position: absolute;
-      top: 170px;
-      left: 50%;
-      margin-left: -450px;
-    }
-    textarea {
-      border-color:#99CDE3;
-      position: absolute;
-  right:0%;
-  width: 60%;
-  font-size: 15px;
-  padding-bottom:50px;
-    }
-    .canvasDiv {
-      position: relative;
-      top: 400px;
-    }
-    h1 {
-      position: absolute;
-      top: 210px;
-      left: 50%;
-      width: 800px;
-      margin-left: -400px;
-      font-family: Roboto;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-size: 50px;
-    text-align: center;
-    }
-    h2 {
-      font-family: Roboto;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-size: 40px;
-    text-align: center;
-    }
-    .clear-button {
-      position: absolute;
-      top: 650px;
-      left: 170px;
-      background-color: #5F0F4E;
-      color: white;
-      border-color: #5F0F4E;
-      width: 300px;
-      height: 25px;
-    }
-    .attach-button {
-      position: absolute;
-      top: 590px;
-      right: 15%;
-      background-color: #5F0F4E;
-      color: white;
-      border-color: #5F0F4E;
-      width: 150px;
-      height: 40px;
-    }
-    .p1 {
-      position: absolute;
-      top: 340px;
-      left: 185px;
-      width: 250px;
-      height: 40px;
-      font-family: Roboto;
-    font-style: normal;
-    line-height: normal;
-    font-size: 15px;
-    text-align:center;
-    }
-    .p2 {
-      position: absolute;
-      top: 340px;
-      right: 10%;
-      width: 40%;
-      height: 40px;
-      font-family: Roboto;
-    font-style: normal;
-    line-height: normal;
-    font-size: 15px;
-    }
-    .p3 {
-      position: absolute;
-      top: 580px;
-      right:15%;
-      width: 30%;
-      margin-right: 130px;
-      height: 40px;
-      font-family: Roboto;
-    font-style: normal;
-    line-height: normal;
-    font-size: 15px;}
-    .prev-button {
-      position: absolute;
-      top: 450px;
-      left: 5%;
-      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-size: 50px;
-    background-color:white;
-    border-color:white;
-    }
-    .next-button {
-      position: absolute;
-      top: 450px;
-      right: 5%;
-      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-size: 50px;
-    background-color:white;
-    border-color:white;
-    }
-    .btn-group button {
-      font-family: Roboto;
-    font-style: normal;
-    line-height: normal;
-    font-size: 30px;
-  background-color: white; /* Green background */
-  border: 1px solid #5F0F4E; /* Green border */
-  color: #5F0F4E; /* White text */
+      .TopBanner {
+        position: absolute;
+        width: 100%;
+        height: 80px;
+        left: 0px;
+        top: 0px;
+        background: linear-gradient(
+            180deg,
+            rgba(82, 76, 76, 0.59) 0%,
+            rgba(255, 255, 255, 0.06) 78.45%
+          ),
+          #585f65;
+      }
+      /*hello*/
+      .ExitBanner {
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        left: 0px;
+        margin-top: 72px;
+        background: #edb5bf;
+      }
+      .ExitBannerText {
+        position: absolute;
+        width: 1315.71px;
+        height: 106.2px;
+        margin-left: -650px;
+        left: 50%;
+        top: 80px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 30px;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+      }
+      #bold {
+        font-weight: 800;
+        font-size: 40px;
+      }
+      svg {
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        margin-left: -450px;
+      }
+      textarea {
+        border-color: #99cde3;
+        position: absolute;
+        right: 0%;
+        width: 60%;
+        font-size: 15px;
+        padding-bottom: 50px;
+      }
+      .canvasDiv {
+        position: relative;
+        top: 400px;
+      }
+      h1 {
+        position: absolute;
+        top: 210px;
+        left: 50%;
+        width: 800px;
+        margin-left: -400px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 50px;
+        text-align: center;
+      }
+      h2 {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 40px;
+        text-align: center;
+      }
+      .clear-button {
+        position: absolute;
+        top: 650px;
+        left: 170px;
+        background-color: #5f0f4e;
+        color: white;
+        border-color: #5f0f4e;
+        width: 300px;
+        height: 25px;
+      }
+      .attach-button {
+        position: absolute;
+        top: 590px;
+        right: 15%;
+        background-color: #5f0f4e;
+        color: white;
+        border-color: #5f0f4e;
+        width: 150px;
+        height: 40px;
+      }
+      .p1 {
+        position: absolute;
+        top: 340px;
+        left: 185px;
+        width: 250px;
+        height: 40px;
+        font-family: Roboto;
+        font-style: normal;
+        line-height: normal;
+        font-size: 15px;
+        text-align: center;
+      }
+      .p2 {
+        position: absolute;
+        top: 340px;
+        right: 10%;
+        width: 40%;
+        height: 40px;
+        font-family: Roboto;
+        font-style: normal;
+        line-height: normal;
+        font-size: 15px;
+      }
+      .p3 {
+        position: absolute;
+        top: 580px;
+        right: 15%;
+        width: 30%;
+        margin-right: 130px;
+        height: 40px;
+        font-family: Roboto;
+        font-style: normal;
+        line-height: normal;
+        font-size: 15px;
+      }
+      .prev-button {
+        position: absolute;
+        top: 450px;
+        left: 5%;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 50px;
+        background-color: white;
+        border-color: white;
+      }
+      .next-button {
+        position: absolute;
+        top: 450px;
+        right: 5%;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 50px;
+        background-color: white;
+        border-color: white;
+      }
+      .btn-group button {
+        font-family: Roboto;
+        font-style: normal;
+        line-height: normal;
+        font-size: 30px;
+        background-color: white; /* Green background */
+        border: 1px solid #5f0f4e; /* Green border */
+        color: #5f0f4e; /* White text */
 
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
-}
+        padding: 10px 24px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        float: left; /* Float the buttons side by side */
+      }
 
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
+      .btn-group button:not(:last-child) {
+        border-right: none; /* Prevent double borders */
+      }
 
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
+      /* Clear floats (clearfix hack) */
+      .btn-group:after {
+        content: "";
+        clear: both;
+        display: table;
+      }
 
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #5F0F4E;
-  color: white;
-}
-.btn-group button:focus{
-  background-color: #5F0F4E;
-  color: white;
-  outline: none;
-}
-.toggle-div {
-  position:absolute; 
-  top:600px;
-  left:10%;
-  right:10%;
-  display:none;}
+      /* Add a background color on hover */
+      .btn-group button:hover {
+        background-color: #5f0f4e;
+        color: white;
+      }
+      .btn-group button:focus {
+        background-color: #5f0f4e;
+        color: white;
+        outline: none;
+      }
+      .toggle-div {
+        position: absolute;
+        top: 600px;
+        left: 10%;
+        right: 10%;
+        display: none;
+      }
 
-  label {
-      font-family: Roboto;
-    font-style: normal;
-    line-height: normal;
-    font-size: 15px;
-    text-align:center;
-    position: absolute;
-    left:0%;
+      label {
+        font-family: Roboto;
+        font-style: normal;
+        line-height: normal;
+        font-size: 15px;
+        text-align: center;
+        position: absolute;
+        left: 0%;
+      }
+      p {
+        font-family: Roboto;
+        font-style: normal;
+        line-height: normal;
+        font-size: 15px;
+        text-align: center;
+      }
 
-}
-p {
-      font-family: Roboto;
-    font-style: normal;
-    line-height: normal;
-    font-size: 15px;
-    text-align:center;
-}
-
-input {
-  border: 1px solid #99CDE3;
-  position: absolute;
-  right:0%;
-  width: 60%;
-  font-size: 15px;
-}
-#add-witness {
-  font-size: 15px;
-  position: absolute;
-  left: 50%;
-  margin-left: -100px;
-  border-right: 1px solid #5F0F4E;
-}
-  
-
+      input {
+        border: 1px solid #99cde3;
+        position: absolute;
+        right: 0%;
+        width: 60%;
+        font-size: 15px;
+      }
+      #add-witness {
+        font-size: 15px;
+        position: absolute;
+        left: 50%;
+        margin-left: -100px;
+        border-right: 1px solid #5f0f4e;
+      }
     </style>
   </head>
   <body>
-      <div class="TopBanner"></div>
-      <div class="ExitBanner"></div></a>
-      <a href="https://www.google.ca" class="ExitBannerText"> <span id="bold">Exit</span> If you need to exit this page quickly </a>
-      <svg height="50" width="875">
-          <circle cx="50" cy="25" r="20" fill="#C4C4C4" />
-          <circle cx="150" cy="25" r="20" fill="#C4C4C4" />
-          <circle cx="250" cy="25" r="20" fill="#C4C4C4" />
-          <circle cx="350" cy="25" r="20" fill="#C4C4C4" />
-          <circle cx="450" cy="25" r="20" fill="#C4C4C4" />
-          <circle cx="550" cy="25" r="20" fill="#C4C4C4" />
-          <circle cx="650" cy="25" r="20" fill="#675682" />
-          <circle cx="750" cy="25" r="20" fill="#C4C4C4" />
-          <circle cx="850" cy="25" r="20" fill="#C4C4C4" />
-      </svg>
+    <div class="TopBanner"></div>
+    <div class="ExitBanner"></div>
+    <a href="https://www.google.ca" class="ExitBannerText">
+      <span id="bold">Exit</span> If you need to exit this page quickly
+    </a>
+    <svg height="50" width="875">
+      <circle cx="50" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="150" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="250" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="350" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="450" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="550" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="650" cy="25" r="20" fill="#675682" />
+      <circle cx="750" cy="25" r="20" fill="#C4C4C4" />
+      <circle cx="850" cy="25" r="20" fill="#C4C4C4" />
+    </svg>
     <h1>Were there any witnesses?</h1>
-    <div class="btn-group" style="position:absolute;top:450px;left:50%;margin-left:-170px;">
-        <button id="btn_1" onclick="toggle(1)">Yes</button>
-        <button id="btn_2" onclick="toggle(2)">No</button>
-        <button id="btn_3" onclick="toggle(3)">Maybe</button>
+    <div
+      class="btn-group"
+      style="position:absolute;top:450px;left:50%;margin-left:-170px;"
+    >
+      <button id="btn_1" onclick="toggle(1)">Yes</button>
+      <button id="btn_2" onclick="toggle(2)">No</button>
+      <button id="btn_3" onclick="toggle(3)">Maybe</button>
     </div>
     <div id="div_1" class="toggle-div">
-      <div>
+      <form>
         <div id="witness1">
-          <form>
-            <h2>Information about the witness</h2>
-            <p>Please fill out as accurately as possible. It's okay if you can't answer some fields.</p>
-            <label>Name</label>
-            <input name="resp6" type="text" />
-            <br/>
-            <br/>
-            <label>Phone number</label>
-            <input name="resp6" type="text" />
-            <p></p>
-            <br/>
-            <label>Address</label>
-            <input name="resp6" type="text" />
-            <p></p>
-            <br/>
-            <br/>
-            <br/>
-          </form>
+          <h2>Information about the witness</h2>
+          <p>
+            Please fill out as accurately as possible. It's okay if you can't
+            answer some fields.
+          </p>
+          <label>Name</label>
+          <input name="name" type="text" />
+          <br />
+          <br />
+          <label>Phone number</label>
+          <input name="phone" type="text" />
+          <p></p>
+          <br />
+          <label>Address</label>
+          <input name="address" type="text" />
+          <p></p>
+          <br />
+          <br />
+          <br />
         </div>
-      </div>
+      </form>
       <div class="btn-group">
-          <button  id="add-witness" onclick="duplicate('witness1')">Add witness</button>
-          <br/>
-          <br/>
-          <br/>
+        <button id="add-witness" onclick="duplicate('witness1')">
+          Add witness
+        </button>
+        <br />
+        <br />
+        <br />
       </div>
-      
     </div>
 
-    <div id="div_2" class="toggle-div">
-    </div>
+    <div id="div_2" class="toggle-div"></div>
 
-
-        <div id="div_3" class="toggle-div">
-          <div>
-              <div id="witness2">
-                <h2>Describe the possible witness</h2>
-                <p>Please fill out as accurately as possible. It's okay if you can't answer some fields.</p>
-                <label>Age</label>
-                <input name="resp6" type="text" />
-                <br/>
-                <br/>
-                <label>Race</label>
-                <input name="resp6" type="text" />
-                <p></p>
-                <br/>
-                <label>Gender</label>
-                <input name="resp6" type="text" />
-                <p></p>
-                <br/>
-                <label>Height</label>
-                <input name="resp6" type="text" />
-                <p></p>
-                <br/>
-                <label>Build</label>
-                <input name="resp6" type="text" />
-                <p></p>
-                <br/>
-                <label>Eye colour</label>
-                <input name="resp6" type="text" />
-                <p></p>
-                <br/>
-                <label>Hair colour</label>
-                <input name="resp6" type="text" />
-                <p></p>
-                <br/>
-                <label>Clothing</label>
-                <input name="resp6" type="text" />
-                <p></p>
-                <br/>
-                <label>Any special features (eg. tatoo, piercing, accent)</label>
-                <textarea name="resp6" rows="10"></textarea>
-                <p></p>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+    <div id="div_3" class="toggle-div">
+      <form>
+        <div id="witness2">
+          <h2>Describe the possible witness</h2>
+          <p>
+            Please fill out as accurately as possible. It's okay if you can't
+            answer some fields.
+          </p>
+          <label>Age</label>
+          <input name="age" type="text" />
+          <br />
+          <br />
+          <label>Race</label>
+          <input name="race" type="text" />
+          <p></p>
+          <br />
+          <label>Gender</label>
+          <input name="gender" type="text" />
+          <p></p>
+          <br />
+          <label>Height</label>
+          <input name="height" type="text" />
+          <p></p>
+          <br />
+          <label>Build</label>
+          <input name="build" type="text" />
+          <p></p>
+          <br />
+          <label>Eye colour</label>
+          <input name="eye-color" type="text" />
+          <p></p>
+          <br />
+          <label>Hair colour</label>
+          <input name="hair-color" type="text" />
+          <p></p>
+          <br />
+          <label>Clothing</label>
+          <input name="clothing" type="text" />
+          <p></p>
+          <br />
+          <label>Any special features (eg. tatoo, piercing, accent)</label>
+          <textarea name="special" rows="10"></textarea>
+          <p></p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
-      </div>
+      </form>
       <div class="btn-group">
-          <button  id="add-witness" onclick="duplicate('witness2')">Add witness</button>
-          <br/>
-          <br/>
-          <br/>
+        <button id="add-witness" onclick="duplicate('witness2')">
+          Add witness
+        </button>
+        <br />
+        <br />
+        <br />
       </div>
     </div>
 
-
-    <a href="6_weapon.html"><button id="previous" class="prev-button">&lt;</button></a>
-    <a href="8_other-details.html"><button id="next" class="next-button">&gt;</button></a>
+    <a href="6_weapon.html"
+      ><button id="previous" class="prev-button">&lt;</button></a
+    >
+    <a href="8_other-details.html"
+      ><button id="next" class="next-button">&gt;</button></a
+    >
   </body>
 </html>

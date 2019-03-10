@@ -4,6 +4,7 @@
   <head>
     <title>Create HTML5 Canvas JavaScript Drawing App Example</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script type="module" src="form.js"></script>
     <style>
       .canvasDiv {
         position:absolute;
@@ -30,6 +31,24 @@
     margin-top: 72px;
     background: #EDB5BF;
     }
+
+    #send-email{
+                position: absolute;
+                right:0px;
+                top: 80%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-family: Arial;
+                font-weight: 800;
+                background-color: white;             
+                border: 0px solid white;
+                
+            
+            }
+            #send-email img{
+                width: 7rem;
+            }
     .ExitBannerText{
     position: absolute;
     width: 1315.71px;
@@ -183,8 +202,9 @@
     <button id="clear" class="attach-button">Attach</button>
     <p class="p3">If you are comfortable, attach pictures of physical injuries.</p>
     <textarea id="text-area" rows="10"></textarea>
-    <a href="3_what-happened.html"><button id="previous" class="prev-button">&lt;</button></a>
+    <a href="3_what-happened.html"><button id="previous" class="prev-button" onclick="saveArray()">&lt;</button></a>
     <a href="5_assaulter.html"><button id="next" class="next-button">&gt;</button></a>
+    <button type="button" id="send-email"><img src="images/Email%20icon.png">Export form</button>
     
     <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
     <script type="text/javascript" src="html5-canvas-drawing-app.js"></script>
