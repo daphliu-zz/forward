@@ -180,7 +180,9 @@
     <div id="canvasDiv" class="canvasDiv"></div>
     <h1>Physical Injuries</h1>
     <button id="clear" class="clear-button">Clear</button>
-    <button id="clear" class="attach-button">Attach</button>
+    <label for="fileInput" id="attach" class="attach-button">Attach</label>
+    <input hidden id="fileInput" name="uploadedImage" type="file" accept="image/*" multiple />
+    <div id="images-container"></div>
     <p class="p3">If you are comfortable, attach pictures of physical injuries.</p>
     <textarea id="text-area" rows="10"></textarea>
     <a href="3_what-happened.html"><button id="previous" class="prev-button">&lt;</button></a>
@@ -189,7 +191,7 @@
     <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
     <script type="text/javascript" src="html5-canvas-drawing-app.js"></script>
     <script type="text/javascript">
-    	 drawingApp.init();
+       drawingApp.init();
 	</script>
   </body>
 </html>
