@@ -25,7 +25,7 @@ input.addEventListener("change", async e => {
 });
 
 async function load() {
-  const images = await get("uploadedImage");
+  const images = (await get("uploadedImage")) || [];
 
   for (const dataUrl of images) {
     let img = document.createElement("img");
