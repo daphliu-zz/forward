@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <script type="module" src="form.js"></script>
-  </head>
-  <body>
-    <form>
-      <label
-        >What happened?<br />
-        <input name="resp3" type="text" />
-      </label>
-      <br />
-    </form>
-    <br />
-    <a href="2_where-it-happened.html"><button>Previous</button></a>
-    <a href="4_physical-trauma.html"><button>Next</button></a>
-    <button type="button" id="send-email">Send email</button>
-    <a href="tel:+1-778-680-8965" style="text-decoration: none"
-      ><button><b>Call 911</b></button></a
-    >
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="module" src="form.js"></script>
+
+    </head>
+    <body>
+        <form>
+            <label>What happened?<br />
+                <textarea name="resp3" id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="10" style="width:100%;"></textarea>
+            </label>
+            <br />
+        </form>
+        <br />
+        <div class="container">
+            <div class="app"> 
+                <button id="start-record-btn" title="Start Recording">Start Recording</button>
+                <button id="pause-record-btn" title="Pause Recording">Pause Recording</button> 
+            </div>
+        </div>
+
+        <a href="2_where-it-happened.html"><button>Previous</button></a>
+        <a href="4_physical-trauma.html"><button>Next</button></a>
+        <button type="button" id="send-email">Send email</button>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="speech-to-text.js"></script>
+
+    </body>
 </html>
+
+
