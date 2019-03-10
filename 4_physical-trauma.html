@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <script type="module" src="form.js"></script>
+    <script type="module" src="upload-image.js"></script>
+    <style>
+      img {
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <form>
@@ -19,5 +25,10 @@
     <a href="3_what-happened.html"><button>Previous</button></a>
     <a href="5_assaulter.html"><button>Next</button></a>
     <button type="button" id="send-email">Send email</button>
+    <input name="uploadedImage" type="file" accept="image/*" multiple />
+    <div id="images-container"></div>
+    <a href="tel:+1-778-680-8965" style="text-decoration: none"
+      ><button><b>Call 911</b></button></a
+    >
   </body>
 </html>
